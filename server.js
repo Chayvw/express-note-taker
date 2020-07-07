@@ -1,7 +1,7 @@
 // 1. Require Express
 const express = require("express");
-// const path = require("path");
-// const fs = require("fs");
+const path = require("path");
+const fs = require("fs");
 
 // 2. Create an instance of Express - app
 const app = express();
@@ -15,8 +15,9 @@ app.use(express.json());
 
 // View Routes
 app.get("/", (req, res) => { 
-res.send("Hello World") ;
-});
+ 
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+  });
 
 // 4. Listen on that port
 app.listen(PORT, () => {
