@@ -18,15 +18,16 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // View Routes
-app.get("*", (req, res) => { 
-    res.sendFile(path.join(__dirname, "./public/index.html"));
-  });
   app.get("/notes", (req, res) => { 
     res.sendFile(path.join(__dirname, "./public/notes.html"));
   });
+
+  app.get("*", (req, res) => { 
+    res.sendFile(path.join(__dirname, "./public/index.html"));
+  });
   // API Routes will GET and POST fs will read file res.json will 
   
-app.get("/api/", (req, res) => {
+app.get("/api/notes", (req, res) => {
   fs.readFile("./db/db.json", "utf8", (err, data) => {
     
     const newNotes = JSON.parse(data);
