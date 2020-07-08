@@ -5,7 +5,7 @@ const path = require("path");
 // Require fs to read data from the files  
 const fs = require("fs");
 // an array for new notes 
-const newNotes = [];
+const newNotesArray = [];
 
 // 2. Create an instance of Express - app
 const app = express();
@@ -69,13 +69,19 @@ app.post("/api/notes", (req, res) => {
 
     });
   });
-  app.delete("/api/notes", function (req, res) {
-    res.send('DELETE request to homepage')
-  })
-
-
   
-});
+  // app.delete("/api/notes/:id", (req, res) => {
+  //   // for (let i = 0; i < newNotesArray.length; i++) {
+  //   //   if (newNotesArray[i].id === JSON.parse(req.params.id)) {
+  //     req.params.id
+  //     res.send({type:DELETE});
+    //   }
+    
+  });
+// });
+  
+  
+// });
 // 4. Listen on that PORT
 app.listen(PORT, () => {
   console.log(`Listening on http://localhost:${PORT}`);
