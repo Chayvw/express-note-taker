@@ -17,7 +17,7 @@ Click on heroku server link to open application
 The User will be able to add notes and view previous notes on the server
 
 ## Usage 
-![](public/assets/note.png)
+![](https://github.com/Chayvw/gt-express-note-taker/blob/1c017972d1698a86c206398f67343d0670f3c22f/public/assets/note.png)
 
 [https://stormy-temple-66950.herokuapp.com/]
 
