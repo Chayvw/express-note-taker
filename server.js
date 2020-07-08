@@ -69,6 +69,9 @@ app.post("/api/notes", (req, res) => {
 
     });
   });
+  app.delete("/api/notes", function (req, res) {
+    res.send('DELETE request to homepage')
+  })
 
 
   
